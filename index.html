@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Przemysław Damaz – Portfolio | AI Engineer & Web Developer</title>
+<meta name="description" content="Portfolio Przemysława Damaza (theprzemoo) – AI Engineer, Web Developer i IT Specialist z Rawy Mazowieckiej.">
+<meta name="keywords" content="Przemysław Damaz, theprzemoo, web developer, AI engineer, IT specialist, cybersecurity, portfolio, Rawa Mazowiecka">
+<meta name="author" content="Przemysław Damaz">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7c3aed">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Przemysław Damaz – AI Engineer & Web Developer">
+<meta property="og:description" content="Portfolio Przemysława Damaza – tworzę strony, aplikacje i integracje z AI.">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:image" content="https://example.com/og/przemyslaw-damaz.png">
+<meta property="og:image:alt" content="Zdjęcie lub logo Przemysława Damaza">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://example.com/og/przemyslaw-damaz.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="geo.region" content="PL-LD">
+<meta name="geo.placename" content="Rawa Mazowiecka">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23c084fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307070f'/%3E%3Ccircle cx='32' cy='32' r='22' fill='url(%23g)'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-size='22' fill='%23ffffff' font-family='Syne, system-ui' font-weight='800'%3Epd%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:           #07070f;
+  --bg2:          #0c0c1e;
+  --bg3:          #111130;
+  --purple:       #7c3aed;
+  --purple-mid:   #9d59f5;
+  --purple-light: #c084fc;
+  --purple-sub:   rgba(124,58,237,0.07);
+  --white:        #eeeeff;
+  --grey:         #777799;
+  --grey-light:   #aaaacc;
+  --border:       rgba(160,100,255,0.15);
+  --border-h:     rgba(160,100,255,0.4);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--purple) var(--bg2)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--purple);border-radius:3px}
+:root{
+  --bg:           #07070f;
+  --bg2:          #0c0c1e;
+  --bg3:          #111130;
+  --purple:       #7c3aed;
+  --purple-mid:   #9d59f5;
+  --purple-light: #c084fc;
+  --purple-sub:   rgba(124,58,237,0.07);
+  --white:        #eeeeff;
+  --grey:         #777799;
+  --grey-light:   #aaaacc;
+  --border:       rgba(160,100,255,0.15);
+  --border-h:     rgba(160,100,255,0.4);
+}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:400;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}
+.allow-select,.allow-select *{user-select:text;-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text}
+@media(hover:none){body{cursor:auto}#cursor,#cursor-ring{display:none}}
+
+#cursor{position:fixed;width:12px;height:12px;background:var(--purple-light);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .3s,height .3s;mix-blend-mode:screen}
+#cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(192,132,252,.5);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%)}
+body:has(a:hover) #cursor,body:has(button:hover) #cursor{width:20px;height:20px;background:var(--purple)}
+body:has(a:hover) #cursor-ring,body:has(button:hover) #cursor-ring{width:52px;height:52px;opacity:.4}
+
+@media(min-width:900px){
+  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+}
+
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;animation:orbDrift 20s ease-in-out infinite;will-change:transform}
+.orb1{width:400px;height:400px;background:rgba(124,58,237,.18);top:-100px;left:-100px}
+.orb2{width:350px;height:350px;background:rgba(168,85,247,.12);bottom:0;right:-100px;animation-delay:-7s}
+.orb3{width:250px;height:250px;background:rgba(99,40,200,.1);top:50%;left:50%;animation-delay:-14s}
+@media(max-width:600px){.orb{display:none}}
+@keyframes orbDrift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-20px) scale(1.04)}66%{transform:translate(-15px,30px) scale(.97)}}
+
+section{position:relative;z-index:1;padding:100px 60px}
+section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100px;pointer-events:none;z-index:2}
+#hero::after    {background:linear-gradient(to bottom,transparent,var(--bg2))}
+#about::after   {background:linear-gradient(to bottom,transparent,var(--bg))}
+#skills::after  {background:linear-gradient(to bottom,transparent,var(--bg2))}
+#projects::after{background:linear-gradient(to bottom,transparent,var(--bg))}
+#certs::after   {background:linear-gradient(to bottom,transparent,var(--bg2))}
+#contact::after {background:linear-gradient(to bottom,transparent,var(--bg))}
+
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
+nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 60px}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
+.nav-logo span{color:var(--purple-light)}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{color:var(--grey-light);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.5px;padding:8px 16px;border-radius:8px;transition:all .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:4px;left:50%;width:0;height:1.5px;background:var(--purple-light);transform:translateX(-50%);transition:width .3s}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{width:60%}
+.nav-cta{background:rgba(124,58,237,.15)!important;border:1px solid var(--border)!important;color:var(--purple-light)!important;border-radius:10px!important}
+.nav-cta:hover{background:rgba(124,58,237,.3)!important;box-shadow:0 0 20px rgba(124,58,237,.3)!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--grey-light);border-radius:2px;transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(7,7,15,.98);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:'Syne',sans-serif;font-size:28px;font-weight:700;color:var(--grey-light);text-decoration:none;transition:color .3s}
+.nav-mobile a:hover{color:var(--purple-light)}
+
+/* HERO - FIX: osobne bloki, bez letter-spacing, font-size nie powoduje przesunięcia */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 60px 80px;text-align:center}
+.hero-inner{max-width:900px;width:100%;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:100px;background:rgba(124,58,237,.12);border:1px solid var(--border);font-size:12px;color:var(--purple-light);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:32px;animation:fadeUp .8s ease both}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--purple-light);animation:pulseDot 2s ease infinite}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+
+/* Kluczowy fix: każda linia to osobny block-level element, 
+   text-align:center działa poprawnie bez letter-spacing który psuje centering */
+.hero-line1,
+.hero-line2 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  /* Używamy vw zamiast clamp żeby skalowanie było przewidywalne */
+  font-size: clamp(42px, 7vw, 96px);
+  line-height: 1.0;
+  letter-spacing: normal; /* żadnego letter-spacing – to był problem */
+}
+.hero-line1 {
+  color: var(--white);
+  animation: fadeUp .8s ease .1s both;
+  margin-bottom: 2px;
+}
+.hero-line2 {
+  background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeUp .8s ease .15s both;
+  margin-bottom: 20px;
+}
+
+.hero-handle{font-size:16px;color:var(--grey);font-weight:300;font-style:italic;margin-bottom:28px;animation:fadeUp .8s ease .2s both}
+.hero-handle span{color:var(--purple-light);font-style:normal}
+.hero-desc{font-size:17px;line-height:1.75;color:var(--grey-light);max-width:580px;margin:0 auto 48px;font-weight:300;animation:fadeUp .8s ease .3s both}
+.hero-desc strong{color:var(--white);font-weight:500}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s ease .4s both}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:12px;background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;font-size:14px;font-weight:600;letter-spacing:.5px;text-decoration:none;cursor:pointer;transition:all .3s;box-shadow:0 8px 30px rgba(124,58,237,.4);position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);opacity:0;transition:opacity .3s}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(124,58,237,.6)}
+.btn-primary:hover::before{opacity:1}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:12px;background:transparent;border:1px solid var(--border);color:var(--grey-light);font-size:14px;font-weight:500;text-decoration:none;cursor:pointer;transition:all .3s}
+.btn-secondary:hover{border-color:var(--border-h);color:var(--white);background:var(--purple-sub);transform:translateY(-3px)}
+.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--grey);font-size:11px;letter-spacing:2px;text-transform:uppercase;animation:fadeUp .8s ease .8s both}
+.hero-scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--purple),transparent);animation:scrollLine 2s ease-in-out infinite}
+@keyframes scrollLine{0%,100%{transform:scaleY(1);opacity:.6}50%{transform:scaleY(.6);opacity:1}}
+
+.section-label{display:inline-flex;align-items:center;gap:10px;font-size:11px;color:var(--purple-light);letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:20px}
+.section-label::before{content:'';width:24px;height:1.5px;background:var(--purple-light)}
+.section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,4vw,52px);letter-spacing:-1px;margin-bottom:16px;line-height:1.1}
+.section-title span{background:linear-gradient(135deg,var(--purple-mid),var(--purple-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-sub{font-size:16px;color:var(--grey);max-width:500px;line-height:1.7;font-weight:300}
+.section-header{margin-bottom:64px}
+
+#about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto}
+.about-left .big-text{font-family:'Syne',sans-serif;font-size:clamp(20px,2.5vw,34px);font-weight:700;line-height:1.35;margin-bottom:28px;letter-spacing:-.5px}
+.about-left .big-text span{color:var(--purple-light)}
+.about-left p{font-size:15px;color:var(--grey-light);line-height:1.85;margin-bottom:16px;font-weight:300}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+.stat-card{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:20px 24px;transition:all .3s}
+.stat-card:hover{border-color:var(--border-h);transform:translateY(-4px);box-shadow:0 12px 30px rgba(124,58,237,.15)}
+.stat-num{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;background:linear-gradient(135deg,var(--purple-mid),var(--purple-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:12px;color:var(--grey);margin-top:4px;letter-spacing:.5px}
+.about-right{display:flex;flex-direction:column;gap:14px}
+.info-row{display:flex;align-items:center;gap:16px;padding:16px 20px;border-radius:12px;background:var(--bg3);border:1px solid var(--border);transition:all .3s}
+.info-row:hover{border-color:var(--border-h);background:rgba(17,17,48,.8)}
+.info-icon{width:36px;height:36px;border-radius:8px;background:rgba(124,58,237,.15);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.info-content{min-width:0;flex:1;overflow:hidden}
+.info-content label{font-size:11px;color:var(--grey);letter-spacing:1px;text-transform:uppercase;display:block}
+.info-content span{display:block;font-size:14px;color:var(--white);font-weight:500;margin-top:2px}
+.info-content a{display:block;font-size:14px;color:var(--purple-light);text-decoration:none;transition:color .2s;margin-top:2px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.info-content a:hover{color:var(--white)}
+
+#skills{background:var(--bg)}
+.skills-wrapper{max-width:1100px;margin:0 auto}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.skill-category{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .3s,box-shadow .3s;position:relative;overflow:hidden;transform-style:preserve-3d;will-change:transform}
+.skill-category::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--purple),transparent);opacity:0;transition:opacity .3s}
+.skill-category:hover{border-color:var(--border-h);box-shadow:0 20px 50px rgba(124,58,237,.18)}
+.skill-category:hover::before{opacity:1}
+.skill-cat-icon{font-size:26px;margin-bottom:12px}
+.skill-cat-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:14px;color:var(--white)}
+.skill-icons{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+.skill-icons img,.si{width:30px;height:30px;border-radius:6px;transition:transform .2s,filter .2s;filter:brightness(.85);object-fit:contain}
+.skill-icons img:hover,.si:hover{transform:scale(1.2) translateY(-2px);filter:brightness(1.1)}
+/* lobehub icons - białe tło daje zły efekt, używamy ciemnego */
+.si{display:inline-flex;align-items:center;justify-content:center;background:#1a1a2e;border-radius:6px;cursor:default;flex-shrink:0}
+.si svg{width:20px;height:20px}
+/* lobehub PNG icons mają białe warianty idealne na ciemne tło */
+.ai-icon{width:30px;height:30px;border-radius:6px;filter:brightness(.85);transition:transform .2s,filter .2s;object-fit:contain}
+.ai-icon:hover{transform:scale(1.2) translateY(-2px);filter:brightness(1.1)}
+
+/* brand-icon – dla logotypów z Simple Icons (Apache, nmap, Wireshark, phpMyAdmin itd.) */
+.brand-icon{
+  background:#1a1a2e;
+  border-radius:6px;
+  padding:3px;
+}
+
+.skill-tags{display:flex;flex-wrap:wrap;gap:7px}
+.skill-tag{position:relative;padding:5px 11px;border-radius:7px;font-size:11px;font-weight:500;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);color:var(--purple-light);transition:all .2s;letter-spacing:.3px;cursor:default}
+.skill-tag:hover{background:rgba(124,58,237,.25);border-color:var(--purple);color:var(--white)}
+.skill-tag[data-tip]::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:rgba(17,17,40,.95);border:1px solid var(--border);color:var(--grey-light);font-size:10px;white-space:nowrap;padding:4px 8px;border-radius:6px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:100}
+.skill-tag[data-tip]:hover::after{opacity:1}
+
+#projects{background:var(--bg2)}
+.projects-wrapper{max-width:1100px;margin:0 auto}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.project-card{background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:32px;transition:all .4s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.project-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 0%,rgba(124,58,237,.1),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.project-card:hover{border-color:var(--border-h);transform:translateY(-8px);box-shadow:0 24px 60px rgba(124,58,237,.15)}
+.project-card:hover::after{opacity:1}
+.project-card.placeholder{border-style:dashed;background:transparent;align-items:center;justify-content:center;text-align:center;min-height:220px}
+.project-card.placeholder:hover{background:var(--purple-sub)}
+.placeholder-icon{font-size:32px;margin-bottom:12px;opacity:.4}
+.placeholder-text{font-size:14px;color:var(--grey);font-weight:300;line-height:1.6}
+.project-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
+.project-icon{width:46px;height:46px;border-radius:12px;background:rgba(124,58,237,.15);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:22px}
+.project-links{display:flex;gap:8px}
+.project-link{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:var(--grey);text-decoration:none;transition:all .2s}
+.project-link:hover{background:var(--purple-sub);border-color:var(--border-h);color:var(--purple-light)}
+.project-name{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:10px}
+.project-desc{font-size:14px;color:var(--grey-light);line-height:1.7;font-weight:300;flex:1;margin-bottom:20px}
+.project-stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack-tag{padding:4px 10px;border-radius:6px;font-size:11px;font-weight:500;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.15);color:var(--grey-light)}
+
+#certs{background:var(--bg)}
+.certs-wrapper{max-width:1100px;margin:0 auto}
+.cert-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;display:flex;align-items:center;gap:16px;transition:all .3s;max-width:480px}
+.cert-card:hover{border-color:var(--border-h);transform:translateY(-4px);box-shadow:0 12px 30px rgba(124,58,237,.1)}
+.cert-icon{width:44px;height:44px;border-radius:10px;flex-shrink:0;background:rgba(124,58,237,.12);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px}
+.cert-name{font-size:14px;font-weight:600;margin-bottom:4px}
+.cert-issuer{font-size:12px;color:var(--grey)}
+.cert-status{margin-left:auto;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:.5px;flex-shrink:0;background:rgba(250,204,21,.1);color:#fbbf24;border:1px solid rgba(250,204,21,.2)}
+
+#contact{background:var(--bg2)}
+.contact-wrapper{max-width:800px;margin:0 auto;text-align:center}
+.contact-wrapper .section-label{justify-content:center}
+.contact-wrapper .section-sub{margin:0 auto 48px}
+.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:48px}
+.contact-card{display:flex;align-items:center;gap:14px;padding:16px 24px;border-radius:14px;background:var(--bg3);border:1px solid var(--border);color:var(--grey-light);text-decoration:none;font-size:14px;font-weight:500;transition:all .3s}
+.contact-card:hover{border-color:var(--border-h);color:var(--white);background:var(--purple-sub);transform:translateY(-4px);box-shadow:0 12px 30px rgba(124,58,237,.15)}
+.contact-card svg{width:20px;height:20px;opacity:.7;flex-shrink:0;transition:opacity .2s}
+.contact-card:hover svg{opacity:1}
+.contact-divider{width:1px;height:60px;background:var(--border);margin:0 auto 32px}
+.contact-email-big{font-family:'Syne',sans-serif;font-size:clamp(14px,2.5vw,26px);font-weight:700;text-decoration:none;background:linear-gradient(135deg,var(--white),var(--purple-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:all .3s;display:inline-block;word-break:break-all}
+.contact-email-big:hover{transform:scale(1.03)}
+
+footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--grey)}
+.footer-logo span{color:var(--purple-light)}
+.footer-copy{font-size:12px;color:var(--grey)}
+.footer-github{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--grey);text-decoration:none;transition:color .2s}
+.footer-github:hover{color:var(--purple-light)}
+.footer-github svg{width:14px;height:14px;flex-shrink:0}
+.footer-top{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--grey);text-decoration:none;cursor:pointer;transition:color .2s}
+.footer-top:hover{color:var(--purple-light)}
+.footer-top svg{width:14px;height:14px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}
+
+@media(max-width:1024px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){
+  nav{padding:16px 24px}nav.scrolled{padding:12px 24px}.nav-links{display:none}.nav-hamburger{display:flex}
+  section{padding:80px 24px}#hero{padding:100px 24px 60px}
+  .about-grid{grid-template-columns:1fr;gap:48px}.projects-grid{grid-template-columns:1fr}
+  footer{padding:24px;flex-direction:column;gap:12px;text-align:center}
+}
+@media(max-width:600px){
+  .skills-grid{grid-template-columns:1fr}.about-stats{grid-template-columns:1fr 1fr}
+  .hero-btns{flex-direction:column;align-items:center}
+  .hero-btns .btn-primary,.hero-btns .btn-secondary{width:100%;justify-content:center}
+  section{padding:64px 20px}#hero{padding:90px 20px 60px}
+  .contact-links{flex-direction:column;align-items:center}.contact-card{width:100%;justify-content:center}
+  .hero-scroll{display:none}
+}
+@media(max-width:380px){.about-stats{grid-template-columns:1fr}}
+
+/* Redeklaracja zmiennych w poprawnym selektorze :root (dla pewności działania) */
+:root{
+  --bg:           #07070f;
+  --bg2:          #0c0c1e;
+  --bg3:          #111130;
+  --purple:       #7c3aed;
+  --purple-mid:   #9d59f5;
+  --purple-light: #c084fc;
+  --purple-sub:   rgba(124,58,237,0.07);
+  --white:        #eeeeff;
+  --grey:         #777799;
+  --grey-light:   #aaaacc;
+  --border:       rgba(160,100,255,0.15);
+  --border-h:     rgba(160,100,255,0.4);
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<div class="nav-mobile" id="navMobile">
+  <a href="#about"    onclick="closeMobileNav()">O mnie</a>
+  <a href="#skills"   onclick="closeMobileNav()">Umiejętności</a>
+  <a href="#projects" onclick="closeMobileNav()">Projekty</a>
+  <a href="#certs"    onclick="closeMobileNav()">Certyfikaty</a>
+  <a href="#contact"  onclick="closeMobileNav()" style="color:var(--purple-light)">Kontakt</a>
+</div>
+
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">pd<span>.</span></a>
+  <div class="nav-links">
+    <a href="#about">O mnie</a>
+    <a href="#skills">Umiejętności</a>
+    <a href="#projects">Projekty</a>
+    <a href="#certs">Certyfikaty</a>
+    <a href="#contact" class="nav-cta">Kontakt</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Dostępny do współpracy</div>
+    <span class="hero-line1">Przemysław</span>
+    <span class="hero-line2">Damaz</span>
+    <p class="hero-handle">aka <span>theprzemoo</span> · ur. 13.04.2009</p>
+    <p class="hero-desc">
+      <strong>AI Engineer, Web Developer &amp; IT Specialist.</strong><br>
+      Tworzę nowoczesne strony i aplikacje z wykorzystaniem sztucznej inteligencji.
+      Pasjonuję się cyberbezpieczeństwem, psychologią i strategicznym myśleniem.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Zobacz projekty
+      </a>
+      <a href="#contact" class="btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Napisz do mnie
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="about-left reveal">
+      <div class="big-text">Programuję, uczę się<br>i <span>łączę technologię</span><br>z pasją do tworzenia.</div>
+      <p>Mam 16 lat, uczę się w technikum informatycznym i aktywnie buduję projekty webowe, integracje z AI oraz zarządzam infrastrukturą serwerową. Wierzę, że przyszłość należy do tych, którzy potrafią efektywnie współpracować ze sztuczną inteligencją.</p>
+      <p>Poza kodem interesuję się cyberbezpieczeństwem, psychologią i grami. Gram w Fortnite i CS2. Z Minecraftem jestem związany od trzeciego roku życia — i właśnie tam zaczęła się moja przygoda z programowaniem i administracją serwerami.</p>
+      <div class="about-stats">
+        <div class="stat-card reveal reveal-delay-1"><div class="stat-num" data-target="2012" data-mode="year">2012</div><div class="stat-label">Pierwszy kontakt z IT</div></div>
+        <div class="stat-card reveal reveal-delay-2"><div class="stat-num" data-target="1" data-mode="count">1</div><div class="stat-label">Projekt w portfolio</div></div>
+        <div class="stat-card reveal reveal-delay-3"><div class="stat-num" data-target="15" data-mode="plus">15+</div><div class="stat-label">Technologii i narzędzi</div></div>
+        <div class="stat-card reveal reveal-delay-4"><div class="stat-num" data-target="3" data-mode="count">3</div><div class="stat-label">Języki komunikacji</div></div>
+      </div>
+    </div>
+    <div class="about-right reveal reveal-delay-2">
+      <div class="info-row"><div class="info-icon">📍</div><div class="info-content"><label>Lokalizacja</label><span>Polska, Łódzkie, Rawa Mazowiecka</span></div></div>
+      <div class="info-row"><div class="info-icon">🎓</div><div class="info-content"><label>Edukacja</label><span>Technik Informatyk</span></div></div>
+      <div class="info-row"><div class="info-icon">🌐</div><div class="info-content"><label>Języki</label><span>Polski (N) · Angielski (B1+) · Rosyjski (A2)</span></div></div>
+      <div class="info-row"><div class="info-icon">🔗</div><div class="info-content"><label>Media</label><a href="https://guns.lol/theprzemoo_" target="_blank" rel="noopener">guns.lol/theprzemoo_</a></div></div>
+      <div class="info-row"><div class="info-icon">💻</div><div class="info-content"><label>GitHub</label><a href="https://github.com/theprzemoo" target="_blank" rel="noopener">github.com/theprzemoo</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="skills-wrapper">
+    <div class="section-header reveal">
+      <div class="section-label">Co potrafię</div>
+      <h2 class="section-title">Umiejętności <span>&amp; Stack</span></h2>
+      <p class="section-sub">Szeroki profil techniczny — web development, AI, infrastruktura i administracja.</p>
+    </div>
+    <div class="skills-grid">
+
+      <!-- Web Development -->
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-cat-icon">🌐</div>
+        <div class="skill-cat-title">Web Development</div>
+        <div class="skill-icons">
+          <img src="https://skillicons.dev/icons?i=html"   alt="HTML5"      title="HTML5" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=css"    alt="CSS3"       title="CSS3" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=js"     alt="JavaScript" title="JavaScript" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=ts"     alt="TypeScript" title="TypeScript" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=react"  alt="React"      title="React" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js"    title="Next.js" loading="lazy">
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag" data-tip="w nauce">TypeScript</span>
+          <span class="skill-tag" data-tip="w nauce">React</span>
+          <span class="skill-tag" data-tip="w nauce">Next.js</span>
+        </div>
+      </div>
+
+      <!-- AI & Integracje - lobehub icons -->
+      <div class="skill-category reveal reveal-delay-2">
+        <div class="skill-cat-icon">🤖</div>
+        <div class="skill-cat-title">AI &amp; Integracje</div>
+        <div class="skill-icons">
+          <!-- OpenAI - lobehub dark variant -->
+          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/openai.png" alt="OpenAI" title="OpenAI API" loading="lazy" decoding="async">
+          <!-- Claude/Anthropic - lobehub -->
+          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/claude.png" alt="Claude AI" title="Claude AI" loading="lazy" decoding="async">
+          <!-- Cursor - lobehub -->
+          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/cursor.png" alt="Cursor" title="Cursor AI" loading="lazy" decoding="async">
+          <!-- Gemini - lobehub -->
+          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/gemini.png" alt="Gemini" title="Google Gemini" loading="lazy" decoding="async">
+          <!-- Firebase - skillicons -->
+          <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase" title="Firebase" loading="lazy" decoding="async">
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">OpenAI API</span>
+          <span class="skill-tag">Claude AI</span>
+          <span class="skill-tag">Vibe Coding</span>
+          <span class="skill-tag">Cursor / Trae</span>
+          <span class="skill-tag">Prompt Engineering</span>
+          <span class="skill-tag">Firebase</span>
+        </div>
+      </div>
+
+      <!-- Programowanie -->
+      <div class="skill-category reveal reveal-delay-3">
+        <div class="skill-cat-icon">⚙️</div>
+        <div class="skill-cat-title">Programowanie</div>
+        <div class="skill-icons">
+          <img src="https://skillicons.dev/icons?i=java"   alt="Java"   title="Java" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=cs"     alt="C#"     title="C#" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=cpp"    alt="C++"    title="C++" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=php"    alt="PHP"    title="PHP" loading="lazy">
+          <span class="si" title="Scratch">
+            <svg viewBox="0 0 24 24" fill="#FF8C1A"><path d="M11.956 0C5.392 0 .028 5.367.028 11.956c0 6.589 5.364 11.956 11.928 11.956 6.589 0 11.956-5.367 11.956-11.956C23.912 5.367 18.545 0 11.956 0zm0 2.073c5.454 0 9.883 4.43 9.883 9.883 0 5.454-4.43 9.883-9.883 9.883-5.454 0-9.883-4.43-9.883-9.883 0-5.454 4.43-9.883 9.883-9.883zm-1.9 2.944c-1.595.117-3.038 1.134-3.597 2.7-.406 1.14-.219 2.427.491 3.406.483.668 1.175 1.157 1.935 1.42-.182.35-.275.742-.255 1.137.052 1.104.867 2.04 1.944 2.283.485.11.993.072 1.456-.113.386.536.957.935 1.614 1.07 1.188.244 2.408-.437 2.836-1.562.243-.637.19-1.354-.138-1.947.43-.367.747-.868.877-1.432.277-1.21-.319-2.497-1.43-3.062-.558-.28-1.19-.351-1.793-.22-.296-.577-.784-1.047-1.392-1.307-.46-.193-.966-.252-1.457-.193l-.09-.18z"/></svg>
+          </span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag" data-tip="podstawy">C#</span>
+          <span class="skill-tag" data-tip="podstawy">C++</span>
+          <span class="skill-tag">Minecraft Plugins</span>
+        </div>
+      </div>
+
+      <!-- IT & Infrastruktura -->
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-cat-icon">🖥️</div>
+        <div class="skill-cat-title">IT &amp; Infrastruktura</div>
+        <div class="skill-icons">
+          <img src="https://skillicons.dev/icons?i=linux"   alt="Linux"       title="Linux" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=nginx"   alt="Nginx"       title="Nginx" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=ubuntu"  alt="Ubuntu"      title="Ubuntu" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=arch"    alt="Arch Linux"  title="Arch Linux" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/linuxmint"  class="brand-icon" alt="Linux Mint" title="Linux Mint" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/opensuse"   class="brand-icon" alt="openSUSE"   title="openSUSE" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/gnome"      class="brand-icon" alt="GNOME"      title="GNOME" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/apache"     class="brand-icon" alt="Apache"     title="Apache" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=bash"    alt="Bash"        title="Bash" loading="lazy" decoding="async">
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Serwery www</span>
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">Panele hostingowe</span>
+          <span class="skill-tag">Naprawa sprzętu</span>
+        </div>
+      </div>
+
+      <!-- Bazy danych -->
+      <div class="skill-category reveal reveal-delay-2">
+        <div class="skill-cat-icon">🗄️</div>
+        <div class="skill-cat-title">Bazy danych</div>
+        <div class="skill-icons">
+          <img src="https://skillicons.dev/icons?i=mysql"   alt="MySQL"   title="MySQL" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" title="MongoDB" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=sqlite"  alt="SQLite"  title="SQLite" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/phpmyadmin" class="brand-icon" alt="phpMyAdmin" title="phpMyAdmin" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/xampp" class="brand-icon" alt="XAMPP" title="XAMPP" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/libreoffice" class="brand-icon" alt="LibreOffice Base" title="LibreOffice Base" loading="lazy" decoding="async">
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">phpMyAdmin</span>
+          <span class="skill-tag">XAMPP</span>
+          <span class="skill-tag">LibreOffice Base</span>
+        </div>
+      </div>
+
+      <!-- Narzędzia -->
+      <div class="skill-category reveal reveal-delay-3">
+        <div class="skill-cat-icon">🛠️</div>
+        <div class="skill-cat-title">Narzędzia &amp; Środowiska</div>
+        <div class="skill-icons">
+          <img src="https://skillicons.dev/icons?i=vscode"  alt="VS Code"       title="VS Code" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=idea"    alt="IntelliJ IDEA" title="IntelliJ IDEA" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=git"     alt="Git"           title="Git" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=github"  alt="GitHub"        title="GitHub" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=discord" alt="Discord"       title="Discord" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=vercel"  alt="Vercel"        title="Vercel" loading="lazy" decoding="async">
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">IntelliJ IDEA</span>
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">Discord Boty</span>
+          <span class="skill-tag">Serwery Discord</span>
+        </div>
+      </div>
+
+      <!-- Cybersecurity -->
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-cat-icon">🔐</div>
+        <div class="skill-cat-title">Cybersecurity</div>
+        <div class="skill-icons">
+          <img src="https://skillicons.dev/icons?i=kali"      alt="Kali Linux" title="Kali Linux" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/wireshark" class="brand-icon" alt="Wireshark"  title="Wireshark" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=nmap"      alt="nmap"       title="nmap" loading="lazy" decoding="async">
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Kali Linux</span>
+          <span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">nmap</span>
+          <span class="skill-tag" data-tip="zainteresowania">Ethical Hacking</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="projects-wrapper">
+    <div class="section-header reveal">
+      <div class="section-label">Co buduję</div>
+      <h2 class="section-title">Projekty <span>&amp; Realizacje</span></h2>
+      <p class="section-sub">Wybrane projekty z portfolio. Kolejne dojdą, gdy będą gotowe – bez „sztucznego” zapychania miejsca.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-top">
+          <div class="project-icon">🎮</div>
+          <div class="project-links">
+            <a href="https://thisisnotworking.site/gra/friendzone.html" target="_blank" rel="noopener" class="project-link" title="Live demo">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-name">Friend Zone – Strona gry</div>
+        <div class="project-desc">Strona promocyjna polskiej gry RPG. Animowane karty bohaterów z lightboxem, galeria, system pobierania z licznikiem i reCAPTCHA. Duży nacisk na animacje CSS i UX.</div>
+        <div class="project-stack">
+          <span class="stack-tag">HTML5</span>
+          <span class="stack-tag">CSS3</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">reCAPTCHA</span>
+        </div>
+      </div>
+      <div class="project-card placeholder reveal reveal-delay-2"><div class="placeholder-icon">＋</div><div class="placeholder-text">Kolejny projekt<br><span style="color:var(--grey);font-size:12px">Wkrótce</span></div></div>
+      <div class="project-card placeholder reveal reveal-delay-3"><div class="placeholder-icon">＋</div><div class="placeholder-text">Kolejny projekt<br><span style="color:var(--grey);font-size:12px">Wkrótce</span></div></div>
+      <div class="project-card placeholder reveal reveal-delay-4"><div class="placeholder-icon">＋</div><div class="placeholder-text">Kolejny projekt<br><span style="color:var(--grey);font-size:12px">Wkrótce</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="certs">
+  <div class="certs-wrapper">
+    <div class="section-header reveal">
+      <div class="section-label">Edukacja</div>
+      <h2 class="section-title">Certyfikaty <span>&amp; Tytuły</span></h2>
+      <p class="section-sub">Aktualnie zdobywany tytuł zawodowy.</p>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="cert-card">
+        <div class="cert-icon">🏫</div>
+        <div><div class="cert-name">Tytuł Technika</div><div class="cert-issuer">Technik Informatyk · Egzamin zawodowy 2027</div></div>
+        <div class="cert-status">W trakcie</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-wrapper">
+    <div class="section-label reveal">Kontakt</div>
+    <h2 class="section-title reveal">Porozmawiajmy <span>o projekcie</span></h2>
+    <p class="section-sub reveal">Szukasz kogoś do projektu webowego, strony z AI, automatyzacji (bot, integracja z API) albo pomocy przy serwerach? Napisz śmiało.</p>
+    <div class="contact-links reveal reveal-delay-1">
+      <a href="mailto:theprzemoobiznes@gmail.com" class="contact-card allow-select">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email
+      </a>
+      <a href="https://github.com/theprzemoo" target="_blank" rel="noopener" class="contact-card">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="https://guns.lol/theprzemoo_" target="_blank" rel="noopener" class="contact-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        guns.lol
+      </a>
+      <a href="https://discord.com/users/theprzemoo_" target="_blank" rel="noopener" class="contact-card" title="Discord: theprzemoo_">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
+        Discord
+      </a>
+    </div>
+    <div class="contact-divider reveal"></div>
+    <a href="mailto:theprzemoobiznes@gmail.com" class="contact-email-big reveal allow-select">theprzemoobiznes@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">pd<span>.</span></div>
+  <div class="footer-copy">© 2026 Przemysław Damaz</div>
+  <a href="https://github.com/theprzemoo/portfolio" target="_blank" rel="noopener" class="footer-github" title="Kod tej strony na GitHub">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+    Kod na GitHub
+  </a>
+  <a href="#hero" class="footer-top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    Góra
+  </a>
+</footer>
+
+<script>
+// CURSOR
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
+
+// NAVBAR
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60),{passive:true});
+
+// MOBILE NAV
+function toggleMobileNav(){const n=document.getElementById('navMobile'),b=document.getElementById('hamburger');n.classList.toggle('open');b.classList.toggle('open');document.body.style.overflow=n.classList.contains('open')?'hidden':'';}
+function closeMobileNav(){document.getElementById('navMobile').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
+
+// REVEAL
+const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+// COUNTING STATS
+function animateCount(el){
+  const target=parseInt(el.dataset.target),mode=el.dataset.mode;
+  const start=mode==='year'?1990:0,dur=mode==='year'?1200:800,t0=performance.now();
+  (function tick(now){const p=Math.min((now-t0)/dur,1),ease=1-Math.pow(1-p,3),val=Math.round(start+(target-start)*ease);el.textContent=mode==='plus'?val+'+':val;if(p<1)requestAnimationFrame(tick);else el.textContent=mode==='plus'?target+'+':target;})(t0);
+}
+const statsObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.stat-num[data-target]').forEach(el=>animateCount(el));statsObs.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('.about-stats').forEach(el=>statsObs.observe(el));
+
+// 3D TILT
+if(window.matchMedia('(hover:hover)').matches){
+  document.querySelectorAll('.skill-category').forEach(card=>{
+    card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();const rx2=((e.clientY-r.top-r.height/2)/(r.height/2))*-8;const ry2=((e.clientX-r.left-r.width/2)/(r.width/2))*8;card.style.transition='border-color .3s,box-shadow .3s';card.style.transform=`perspective(600px) rotateX(${rx2}deg) rotateY(${ry2}deg) translateZ(8px)`;});
+    card.addEventListener('mouseleave',()=>{card.style.transition='transform .4s ease,border-color .3s,box-shadow .3s';card.style.transform='perspective(600px) rotateX(0) rotateY(0) translateZ(0)';});
+  });
+}
+
+// HERO PARTICLES
+(function(){
+  const canvas=document.createElement('canvas');
+  canvas.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5;z-index:0';
+  document.getElementById('hero').appendChild(canvas);
+  const ctx=canvas.getContext('2d');
+  const COUNT=window.innerWidth<600?20:55;
+  let W,H,pts=[];
+  function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;pts=Array.from({length:COUNT},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.5}));}
+  resize();window.addEventListener('resize',resize,{passive:true});
+  function draw(){ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(160,100,255,.7)';ctx.fill();});pts.forEach((a,i)=>pts.slice(i+1).forEach(b=>{const d=Math.hypot(a.x-b.x,a.y-b.y);if(d<110){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(124,58,237,${.18*(1-d/110)})`;ctx.lineWidth=.8;ctx.stroke();}}));requestAnimationFrame(draw);}
+  draw();
+})();
+
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});});});
+
+// Ochrona przed kopiowaniem i zapisem (tylko utrudnienie – źródło strony i tak można zobaczyć)
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey&&e.key==='s'){e.preventDefault();return}
+  if(e.ctrlKey&&e.key==='u'){e.preventDefault();return}
+  if(e.ctrlKey&&e.shiftKey&&e.key==='I'){e.preventDefault();return}
+  if(e.ctrlKey&&e.shiftKey&&e.key==='J'){e.preventDefault();return}
+  if(e.ctrlKey&&e.shiftKey&&e.key==='C'){e.preventDefault();return}
+  if(e.key==='F12'){e.preventDefault();return}
+});
+</script>
+</body>
+</html>
