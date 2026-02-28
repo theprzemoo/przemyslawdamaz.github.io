@@ -27,6 +27,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23c084fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307070f'/%3E%3Ccircle cx='32' cy='32' r='22' fill='url(%23g)'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-size='22' fill='%23ffffff' font-family='Syne, system-ui' font-weight='800'%3Epd%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
+/* ── ZMIENNE ── */
 :root {
   --bg:           #07070f;
   --bg2:          #0c0c1e;
@@ -41,38 +42,29 @@
   --border:       rgba(160,100,255,0.15);
   --border-h:     rgba(160,100,255,0.4);
 }
+
+/* ── RESET & BASE ── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--purple) var(--bg2)}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--bg2)}
 ::-webkit-scrollbar-thumb{background:var(--purple);border-radius:3px}
-:root{
-  --bg:           #07070f;
-  --bg2:          #0c0c1e;
-  --bg3:          #111130;
-  --purple:       #7c3aed;
-  --purple-mid:   #9d59f5;
-  --purple-light: #c084fc;
-  --purple-sub:   rgba(124,58,237,0.07);
-  --white:        #eeeeff;
-  --grey:         #777799;
-  --grey-light:   #aaaacc;
-  --border:       rgba(160,100,255,0.15);
-  --border-h:     rgba(160,100,255,0.4);
-}
-body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:400;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}
-.allow-select,.allow-select *{user-select:text;-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:400;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none}
+.allow-select,.allow-select *{user-select:text;-webkit-user-select:text}
 @media(hover:none){body{cursor:auto}#cursor,#cursor-ring{display:none}}
 
+/* ── CURSOR ── */
 #cursor{position:fixed;width:12px;height:12px;background:var(--purple-light);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .3s,height .3s;mix-blend-mode:screen}
 #cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(192,132,252,.5);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%)}
 body:has(a:hover) #cursor,body:has(button:hover) #cursor{width:20px;height:20px;background:var(--purple)}
 body:has(a:hover) #cursor-ring,body:has(button:hover) #cursor-ring{width:52px;height:52px;opacity:.4}
 
+/* ── NOISE (tylko desktop) ── */
 @media(min-width:900px){
   body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 }
 
+/* ── ORBS ── */
 .orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;animation:orbDrift 20s ease-in-out infinite;will-change:transform}
 .orb1{width:400px;height:400px;background:rgba(124,58,237,.18);top:-100px;left:-100px}
 .orb2{width:350px;height:350px;background:rgba(168,85,247,.12);bottom:0;right:-100px;animation-delay:-7s}
@@ -80,6 +72,7 @@ body:has(a:hover) #cursor-ring,body:has(button:hover) #cursor-ring{width:52px;he
 @media(max-width:600px){.orb{display:none}}
 @keyframes orbDrift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-20px) scale(1.04)}66%{transform:translate(-15px,30px) scale(.97)}}
 
+/* ── SECTION FADES ── */
 section{position:relative;z-index:1;padding:100px 60px}
 section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100px;pointer-events:none;z-index:2}
 #hero::after    {background:linear-gradient(to bottom,transparent,var(--bg2))}
@@ -89,6 +82,7 @@ section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100px
 #certs::after   {background:linear-gradient(to bottom,transparent,var(--bg2))}
 #contact::after {background:linear-gradient(to bottom,transparent,var(--bg))}
 
+/* ── NAV ── */
 nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
 nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 60px}
 .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--white);text-decoration:none;letter-spacing:1px}
@@ -110,39 +104,30 @@ nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-botto
 .nav-mobile a{font-family:'Syne',sans-serif;font-size:28px;font-weight:700;color:var(--grey-light);text-decoration:none;transition:color .3s}
 .nav-mobile a:hover{color:var(--purple-light)}
 
-/* HERO - FIX: osobne bloki, bez letter-spacing, font-size nie powoduje przesunięcia */
+/* ── HERO ── */
 #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 60px 80px;text-align:center}
 .hero-inner{max-width:900px;width:100%;margin:0 auto;display:flex;flex-direction:column;align-items:center}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:100px;background:rgba(124,58,237,.12);border:1px solid var(--border);font-size:12px;color:var(--purple-light);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:32px;animation:fadeUp .8s ease both}
 .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--purple-light);animation:pulseDot 2s ease infinite}
 @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
 
-/* Kluczowy fix: każda linia to osobny block-level element, 
-   text-align:center działa poprawnie bez letter-spacing który psuje centering */
+/* FIX: dwie niezależne linie, letter-spacing:normal = brak przesunięcia */
 .hero-line1,
-.hero-line2 {
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  /* Używamy vw zamiast clamp żeby skalowanie było przewidywalne */
-  font-size: clamp(42px, 7vw, 96px);
-  line-height: 1.0;
-  letter-spacing: normal; /* żadnego letter-spacing – to był problem */
+.hero-line2{
+  display:block;
+  width:100%;
+  text-align:center;
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+  font-size:clamp(42px,7vw,96px);
+  line-height:1.0;
+  letter-spacing:normal;
 }
-.hero-line1 {
-  color: var(--white);
-  animation: fadeUp .8s ease .1s both;
-  margin-bottom: 2px;
-}
-.hero-line2 {
-  background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: fadeUp .8s ease .15s both;
-  margin-bottom: 20px;
+.hero-line1{color:var(--white);animation:fadeUp .8s ease .1s both;margin-bottom:2px}
+.hero-line2{
+  background:linear-gradient(135deg,var(--purple-mid),var(--purple-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:fadeUp .8s ease .15s both;margin-bottom:20px;
 }
 
 .hero-handle{font-size:16px;color:var(--grey);font-weight:300;font-style:italic;margin-bottom:28px;animation:fadeUp .8s ease .2s both}
@@ -160,6 +145,7 @@ nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-botto
 .hero-scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--purple),transparent);animation:scrollLine 2s ease-in-out infinite}
 @keyframes scrollLine{0%,100%{transform:scaleY(1);opacity:.6}50%{transform:scaleY(.6);opacity:1}}
 
+/* ── SECTIONS SHARED ── */
 .section-label{display:inline-flex;align-items:center;gap:10px;font-size:11px;color:var(--purple-light);letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:20px}
 .section-label::before{content:'';width:24px;height:1.5px;background:var(--purple-light)}
 .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,4vw,52px);letter-spacing:-1px;margin-bottom:16px;line-height:1.1}
@@ -167,6 +153,7 @@ nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-botto
 .section-sub{font-size:16px;color:var(--grey);max-width:500px;line-height:1.7;font-weight:300}
 .section-header{margin-bottom:64px}
 
+/* ── ABOUT ── */
 #about{background:var(--bg2)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto}
 .about-left .big-text{font-family:'Syne',sans-serif;font-size:clamp(20px,2.5vw,34px);font-weight:700;line-height:1.35;margin-bottom:28px;letter-spacing:-.5px}
@@ -187,6 +174,7 @@ nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-botto
 .info-content a{display:block;font-size:14px;color:var(--purple-light);text-decoration:none;transition:color .2s;margin-top:2px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .info-content a:hover{color:var(--white)}
 
+/* ── SKILLS ── */
 #skills{background:var(--bg)}
 .skills-wrapper{max-width:1100px;margin:0 auto}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -197,21 +185,11 @@ nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-botto
 .skill-cat-icon{font-size:26px;margin-bottom:12px}
 .skill-cat-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:14px;color:var(--white)}
 .skill-icons{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
-.skill-icons img,.si{width:30px;height:30px;border-radius:6px;transition:transform .2s,filter .2s;filter:brightness(.85);object-fit:contain}
-.skill-icons img:hover,.si:hover{transform:scale(1.2) translateY(-2px);filter:brightness(1.1)}
-/* lobehub icons - białe tło daje zły efekt, używamy ciemnego */
+.skill-icons img,.si,.ai-icon{width:30px;height:30px;border-radius:6px;transition:transform .2s,filter .2s;filter:brightness(.85);object-fit:contain}
+.skill-icons img:hover,.si:hover,.ai-icon:hover{transform:scale(1.2) translateY(-2px);filter:brightness(1.1)}
 .si{display:inline-flex;align-items:center;justify-content:center;background:#1a1a2e;border-radius:6px;cursor:default;flex-shrink:0}
 .si svg{width:20px;height:20px}
-/* lobehub PNG icons mają białe warianty idealne na ciemne tło */
-.ai-icon{width:30px;height:30px;border-radius:6px;filter:brightness(.85);transition:transform .2s,filter .2s;object-fit:contain}
-.ai-icon:hover{transform:scale(1.2) translateY(-2px);filter:brightness(1.1)}
-
-/* brand-icon – dla logotypów z Simple Icons (Apache, nmap, Wireshark, phpMyAdmin itd.) */
-.brand-icon{
-  background:#1a1a2e;
-  border-radius:6px;
-  padding:3px;
-}
+.brand-icon{background:#1a1a2e;border-radius:6px;padding:3px}
 
 .skill-tags{display:flex;flex-wrap:wrap;gap:7px}
 .skill-tag{position:relative;padding:5px 11px;border-radius:7px;font-size:11px;font-weight:500;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);color:var(--purple-light);transition:all .2s;letter-spacing:.3px;cursor:default}
@@ -219,6 +197,7 @@ nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-botto
 .skill-tag[data-tip]::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:rgba(17,17,40,.95);border:1px solid var(--border);color:var(--grey-light);font-size:10px;white-space:nowrap;padding:4px 8px;border-radius:6px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:100}
 .skill-tag[data-tip]:hover::after{opacity:1}
 
+/* ── PROJECTS ── */
 #projects{background:var(--bg2)}
 .projects-wrapper{max-width:1100px;margin:0 auto}
 .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
@@ -240,6 +219,7 @@ nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-botto
 .project-stack{display:flex;flex-wrap:wrap;gap:6px}
 .stack-tag{padding:4px 10px;border-radius:6px;font-size:11px;font-weight:500;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.15);color:var(--grey-light)}
 
+/* ── CERTS ── */
 #certs{background:var(--bg)}
 .certs-wrapper{max-width:1100px;margin:0 auto}
 .cert-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;display:flex;align-items:center;gap:16px;transition:all .3s;max-width:480px}
@@ -249,6 +229,7 @@ nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-botto
 .cert-issuer{font-size:12px;color:var(--grey)}
 .cert-status{margin-left:auto;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:.5px;flex-shrink:0;background:rgba(250,204,21,.1);color:#fbbf24;border:1px solid rgba(250,204,21,.2)}
 
+/* ── CONTACT ── */
 #contact{background:var(--bg2)}
 .contact-wrapper{max-width:800px;margin:0 auto;text-align:center}
 .contact-wrapper .section-label{justify-content:center}
@@ -262,6 +243,7 @@ nav.scrolled{background:rgba(7,7,15,.92);backdrop-filter:blur(20px);border-botto
 .contact-email-big{font-family:'Syne',sans-serif;font-size:clamp(14px,2.5vw,26px);font-weight:700;text-decoration:none;background:linear-gradient(135deg,var(--white),var(--purple-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:all .3s;display:inline-block;word-break:break-all}
 .contact-email-big:hover{transform:scale(1.03)}
 
+/* ── FOOTER ── */
 footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
 .footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--grey)}
 .footer-logo span{color:var(--purple-light)}
@@ -273,11 +255,13 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
 .footer-top:hover{color:var(--purple-light)}
 .footer-top svg{width:14px;height:14px}
 
+/* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}
 
+/* ── RESPONSIVE ── */
 @media(max-width:1024px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){
   nav{padding:16px 24px}nav.scrolled{padding:12px 24px}.nav-links{display:none}.nav-hamburger{display:flex}
@@ -294,22 +278,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
   .hero-scroll{display:none}
 }
 @media(max-width:380px){.about-stats{grid-template-columns:1fr}}
-
-/* Redeklaracja zmiennych w poprawnym selektorze :root (dla pewności działania) */
-:root{
-  --bg:           #07070f;
-  --bg2:          #0c0c1e;
-  --bg3:          #111130;
-  --purple:       #7c3aed;
-  --purple-mid:   #9d59f5;
-  --purple-light: #c084fc;
-  --purple-sub:   rgba(124,58,237,0.07);
-  --white:        #eeeeff;
-  --grey:         #777799;
-  --grey-light:   #aaaacc;
-  --border:       rgba(160,100,255,0.15);
-  --border-h:     rgba(160,100,255,0.4);
-}
 </style>
 </head>
 <body>
@@ -404,12 +372,12 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
         <div class="skill-cat-icon">🌐</div>
         <div class="skill-cat-title">Web Development</div>
         <div class="skill-icons">
-          <img src="https://skillicons.dev/icons?i=html"   alt="HTML5"      title="HTML5" loading="lazy">
-          <img src="https://skillicons.dev/icons?i=css"    alt="CSS3"       title="CSS3" loading="lazy">
-          <img src="https://skillicons.dev/icons?i=js"     alt="JavaScript" title="JavaScript" loading="lazy">
-          <img src="https://skillicons.dev/icons?i=ts"     alt="TypeScript" title="TypeScript" loading="lazy">
-          <img src="https://skillicons.dev/icons?i=react"  alt="React"      title="React" loading="lazy">
-          <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js"    title="Next.js" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=html"   alt="HTML5"      title="HTML5" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=css"    alt="CSS3"       title="CSS3" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=js"     alt="JavaScript" title="JavaScript" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=ts"     alt="TypeScript" title="TypeScript" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=react"  alt="React"      title="React" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js"    title="Next.js" loading="lazy" decoding="async">
         </div>
         <div class="skill-tags">
           <span class="skill-tag">HTML5</span>
@@ -421,20 +389,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
         </div>
       </div>
 
-      <!-- AI & Integracje - lobehub icons -->
+      <!-- AI & Integracje -->
       <div class="skill-category reveal reveal-delay-2">
         <div class="skill-cat-icon">🤖</div>
         <div class="skill-cat-title">AI &amp; Integracje</div>
         <div class="skill-icons">
-          <!-- OpenAI - lobehub dark variant -->
-          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/openai.png" alt="OpenAI" title="OpenAI API" loading="lazy" decoding="async">
-          <!-- Claude/Anthropic - lobehub -->
-          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/claude.png" alt="Claude AI" title="Claude AI" loading="lazy" decoding="async">
-          <!-- Cursor - lobehub -->
-          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/cursor.png" alt="Cursor" title="Cursor AI" loading="lazy" decoding="async">
-          <!-- Gemini - lobehub -->
-          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/gemini.png" alt="Gemini" title="Google Gemini" loading="lazy" decoding="async">
-          <!-- Firebase - skillicons -->
+          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/openai.png"  alt="OpenAI"  title="OpenAI API"    loading="lazy" decoding="async">
+          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/claude.png"  alt="Claude" title="Claude AI"     loading="lazy" decoding="async">
+          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/cursor.png"  alt="Cursor" title="Cursor AI"     loading="lazy" decoding="async">
+          <img class="ai-icon" src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/gemini.png"  alt="Gemini" title="Google Gemini" loading="lazy" decoding="async">
           <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase" title="Firebase" loading="lazy" decoding="async">
         </div>
         <div class="skill-tags">
@@ -452,11 +415,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
         <div class="skill-cat-icon">⚙️</div>
         <div class="skill-cat-title">Programowanie</div>
         <div class="skill-icons">
-          <img src="https://skillicons.dev/icons?i=java"   alt="Java"   title="Java" loading="lazy">
-          <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" loading="lazy">
-          <img src="https://skillicons.dev/icons?i=cs"     alt="C#"     title="C#" loading="lazy">
-          <img src="https://skillicons.dev/icons?i=cpp"    alt="C++"    title="C++" loading="lazy">
-          <img src="https://skillicons.dev/icons?i=php"    alt="PHP"    title="PHP" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=java"   alt="Java"   title="Java" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=cs"     alt="C#"     title="C#" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=cpp"    alt="C++"    title="C++" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=php"    alt="PHP"    title="PHP" loading="lazy" decoding="async">
           <span class="si" title="Scratch">
             <svg viewBox="0 0 24 24" fill="#FF8C1A"><path d="M11.956 0C5.392 0 .028 5.367.028 11.956c0 6.589 5.364 11.956 11.928 11.956 6.589 0 11.956-5.367 11.956-11.956C23.912 5.367 18.545 0 11.956 0zm0 2.073c5.454 0 9.883 4.43 9.883 9.883 0 5.454-4.43 9.883-9.883 9.883-5.454 0-9.883-4.43-9.883-9.883 0-5.454 4.43-9.883 9.883-9.883zm-1.9 2.944c-1.595.117-3.038 1.134-3.597 2.7-.406 1.14-.219 2.427.491 3.406.483.668 1.175 1.157 1.935 1.42-.182.35-.275.742-.255 1.137.052 1.104.867 2.04 1.944 2.283.485.11.993.072 1.456-.113.386.536.957.935 1.614 1.07 1.188.244 2.408-.437 2.836-1.562.243-.637.19-1.354-.138-1.947.43-.367.747-.868.877-1.432.277-1.21-.319-2.497-1.43-3.062-.558-.28-1.19-.351-1.793-.22-.296-.577-.784-1.047-1.392-1.307-.46-.193-.966-.252-1.457-.193l-.09-.18z"/></svg>
           </span>
@@ -476,15 +439,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
         <div class="skill-cat-icon">🖥️</div>
         <div class="skill-cat-title">IT &amp; Infrastruktura</div>
         <div class="skill-icons">
-          <img src="https://skillicons.dev/icons?i=linux"   alt="Linux"       title="Linux" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=nginx"   alt="Nginx"       title="Nginx" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=ubuntu"  alt="Ubuntu"      title="Ubuntu" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=arch"    alt="Arch Linux"  title="Arch Linux" loading="lazy" decoding="async">
-          <img src="https://cdn.simpleicons.org/linuxmint"  class="brand-icon" alt="Linux Mint" title="Linux Mint" loading="lazy" decoding="async">
-          <img src="https://cdn.simpleicons.org/opensuse"   class="brand-icon" alt="openSUSE"   title="openSUSE" loading="lazy" decoding="async">
-          <img src="https://cdn.simpleicons.org/gnome"      class="brand-icon" alt="GNOME"      title="GNOME" loading="lazy" decoding="async">
-          <img src="https://cdn.simpleicons.org/apache"     class="brand-icon" alt="Apache"     title="Apache" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=bash"    alt="Bash"        title="Bash" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=linux"  alt="Linux"      title="Linux"      loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=nginx"  alt="Nginx"      title="Nginx"      loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=ubuntu" alt="Ubuntu"     title="Ubuntu"     loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=arch"   alt="Arch Linux" title="Arch Linux" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/linuxmint" class="brand-icon" alt="Linux Mint" title="Linux Mint" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/opensuse"  class="brand-icon" alt="openSUSE"   title="openSUSE"   loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/gnome"     class="brand-icon" alt="GNOME"      title="GNOME"      loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/apache"    class="brand-icon" alt="Apache"     title="Apache"     loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=bash"  alt="Bash"        title="Bash"       loading="lazy" decoding="async">
         </div>
         <div class="skill-tags">
           <span class="skill-tag">Linux</span>
@@ -500,11 +463,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
         <div class="skill-cat-icon">🗄️</div>
         <div class="skill-cat-title">Bazy danych</div>
         <div class="skill-icons">
-          <img src="https://skillicons.dev/icons?i=mysql"   alt="MySQL"   title="MySQL" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=mysql"   alt="MySQL"   title="MySQL"   loading="lazy" decoding="async">
           <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" title="MongoDB" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=sqlite"  alt="SQLite"  title="SQLite" loading="lazy" decoding="async">
-          <img src="https://cdn.simpleicons.org/phpmyadmin" class="brand-icon" alt="phpMyAdmin" title="phpMyAdmin" loading="lazy" decoding="async">
-          <img src="https://cdn.simpleicons.org/xampp" class="brand-icon" alt="XAMPP" title="XAMPP" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=sqlite"  alt="SQLite"  title="SQLite"  loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/phpmyadmin"  class="brand-icon" alt="phpMyAdmin"     title="phpMyAdmin"     loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/xampp"       class="brand-icon" alt="XAMPP"          title="XAMPP"          loading="lazy" decoding="async">
           <img src="https://cdn.simpleicons.org/libreoffice" class="brand-icon" alt="LibreOffice Base" title="LibreOffice Base" loading="lazy" decoding="async">
         </div>
         <div class="skill-tags">
@@ -522,12 +485,12 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
         <div class="skill-cat-icon">🛠️</div>
         <div class="skill-cat-title">Narzędzia &amp; Środowiska</div>
         <div class="skill-icons">
-          <img src="https://skillicons.dev/icons?i=vscode"  alt="VS Code"       title="VS Code" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=vscode"  alt="VS Code"       title="VS Code"       loading="lazy" decoding="async">
           <img src="https://skillicons.dev/icons?i=idea"    alt="IntelliJ IDEA" title="IntelliJ IDEA" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=git"     alt="Git"           title="Git" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=github"  alt="GitHub"        title="GitHub" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=discord" alt="Discord"       title="Discord" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=vercel"  alt="Vercel"        title="Vercel" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=git"     alt="Git"           title="Git"           loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=github"  alt="GitHub"        title="GitHub"        loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=discord" alt="Discord"       title="Discord"       loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=vercel"  alt="Vercel"        title="Vercel"        loading="lazy" decoding="async">
         </div>
         <div class="skill-tags">
           <span class="skill-tag">VS Code</span>
@@ -543,14 +506,33 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
         <div class="skill-cat-icon">🔐</div>
         <div class="skill-cat-title">Cybersecurity</div>
         <div class="skill-icons">
-          <img src="https://skillicons.dev/icons?i=kali"      alt="Kali Linux" title="Kali Linux" loading="lazy" decoding="async">
-          <img src="https://cdn.simpleicons.org/wireshark" class="brand-icon" alt="Wireshark"  title="Wireshark" loading="lazy" decoding="async">
-          <img src="https://skillicons.dev/icons?i=nmap"      alt="nmap"       title="nmap" loading="lazy" decoding="async">
+          <img src="https://skillicons.dev/icons?i=kali"       alt="Kali Linux" title="Kali Linux" loading="lazy" decoding="async">
+          <img src="https://cdn.simpleicons.org/wireshark"  class="brand-icon" alt="Wireshark"  title="Wireshark"  loading="lazy" decoding="async">
+          <!-- nmap – brak publicznej ikony na CDN, SVG inline -->
+          <span class="si" title="nmap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <circle cx="12" cy="12" r="7" stroke-dasharray="3 2"/>
+              <circle cx="12" cy="12" r="11" stroke-dasharray="2 3" opacity=".5"/>
+              <line x1="12" y1="2" x2="12" y2="5"/>
+              <line x1="12" y1="19" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="5" y2="12"/>
+              <line x1="19" y1="12" x2="22" y2="12"/>
+            </svg>
+          </span>
+          <!-- VMProtect – brak publicznej ikony, używamy tarczy SVG inline -->
+          <span class="si" title="VMProtect">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </span>
         </div>
         <div class="skill-tags">
           <span class="skill-tag">Kali Linux</span>
           <span class="skill-tag">Wireshark</span>
           <span class="skill-tag">nmap</span>
+          <span class="skill-tag">VMProtect</span>
           <span class="skill-tag" data-tip="zainteresowania">Ethical Hacking</span>
         </div>
       </div>
@@ -564,7 +546,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
     <div class="section-header reveal">
       <div class="section-label">Co buduję</div>
       <h2 class="section-title">Projekty <span>&amp; Realizacje</span></h2>
-      <p class="section-sub">Wybrane projekty z portfolio. Kolejne dojdą, gdy będą gotowe – bez „sztucznego” zapychania miejsca.</p>
+      <p class="section-sub">Wybrane projekty z portfolio. Kolejne dojdą, gdy będą gotowe – bez „sztucznego" zapychania miejsca.</p>
     </div>
     <div class="projects-grid">
       <div class="project-card reveal reveal-delay-1">
@@ -641,7 +623,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 60px
   <div class="footer-logo">pd<span>.</span></div>
   <div class="footer-copy">© 2026 Przemysław Damaz</div>
   <a href="https://github.com/theprzemoo/portfolio" target="_blank" rel="noopener" class="footer-github" title="Kod tej strony na GitHub">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
     Kod na GitHub
   </a>
   <a href="#hero" class="footer-top">
@@ -701,17 +683,6 @@ if(window.matchMedia('(hover:hover)').matches){
 
 // SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});});});
-
-// Ochrona przed kopiowaniem i zapisem (tylko utrudnienie – źródło strony i tak można zobaczyć)
-document.addEventListener('contextmenu',e=>e.preventDefault());
-document.addEventListener('keydown',e=>{
-  if(e.ctrlKey&&e.key==='s'){e.preventDefault();return}
-  if(e.ctrlKey&&e.key==='u'){e.preventDefault();return}
-  if(e.ctrlKey&&e.shiftKey&&e.key==='I'){e.preventDefault();return}
-  if(e.ctrlKey&&e.shiftKey&&e.key==='J'){e.preventDefault();return}
-  if(e.ctrlKey&&e.shiftKey&&e.key==='C'){e.preventDefault();return}
-  if(e.key==='F12'){e.preventDefault();return}
-});
 </script>
 </body>
 </html>
