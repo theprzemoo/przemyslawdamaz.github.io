@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/theprzemoo" target="_blank" rel="noreferrer">
+  <a href="https://theprzemoo.github.io/przemyslawdamaz.github.io/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/portfolio-rawa%20maz.%20%7C%20PL-7c3aed?style=for-the-badge" alt="Portfolio" />
   </a>
 </p>
