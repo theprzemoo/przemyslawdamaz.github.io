@@ -48,5 +48,5 @@
 </p>
 
 <p align="center">
-  <sub>© 2026 Przemysław Damaz · <a href="[https://github.com/przemyslawdamaz.github.io](https://theprzemoo.github.io/przemyslawdamaz.github.io/)">Portfolio</a></sub>
+  <sub>© 2026 Przemysław Damaz · <a href="https://github.com/przemyslawdamaz.github.io](https://theprzemoo.github.io/przemyslawdamaz.github.io/">Portfolio</a></sub>
 </p>
