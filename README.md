@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://theprzemoo.github.io/przemyslawdamaz.github.io/" target="_blank" rel="noreferrer">
+  <a href="https://przemyslawdamaz.pl" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/portfolio-rawa%20maz.%20%7C%20PL-7c3aed?style=for-the-badge" alt="Portfolio" />
   </a>
 </p>
@@ -48,5 +48,5 @@
 </p>
 
 <p align="center">
-  <sub>© 2026 Przemysław Damaz · <a href="https://theprzemoo.github.io/przemyslawdamaz.github.io/">Portfolio</a></sub>
+  <sub>© 2026 Przemysław Damaz · <a href="https://przemyslawdamaz.pl">Portfolio</a></sub>
 </p>
